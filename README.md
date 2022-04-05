@@ -54,7 +54,11 @@ input names, ids and javascript parameters. This is a combination of [InputScann
 *example usage:*
 `python parameth.py -u “http://example.com/`
 
+# Attacks
+
 ## XSS
+Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites. XSS attacks occur when an attacker uses a web application to send malicious code, generally in the form of a browser side script, to a different end user.
+
 
 **Web Application Firewalls:** A web application firewall is a security policy enforcement point positioned between a web application and the client endpoint. This functionality can be implemented in software or hardware, running in an appliance device, or in a typical server running a common operating system. It may be a stand-alone device or integrated into other network components.
 
@@ -62,15 +66,37 @@ Here is a good [reference](https://github.com/0xInfection/Awesome-WAF) that desc
 
 Proces for testing XSS and Filtering
 
-- [ ] Step one: Test for Encoding or Weird Behavior 
+- [ ] Test for Encoding or Weird Behavior 
     - payloads can be found [here](https://d3adend.org/xss/ghettoBypass) or [here](https://raw.githubusercontent.com/payloadbox/xss-payload-list/master/Intruder/xss-payload-list.txt)
 
 - [ ] Reverse Engineer Developers Thoughts
     - What filter was created and why
     - Is it a black list or white list of tags allowed
     - Does it encode things? how does it encode them
-    - Are the  
+
+- [ ] Test XSS Flow
+    - How are non malicious tags handled or incomplete tags
+    - what tags can you chain together 
+
+- [ ] File Upload for Stored XSS
+    - Are there any filters for file names
+    - Are their filters for file types
+
+## IDOR
+Insecure Direct Object References (IDOR) occur when an application provides direct access to objects based on user-supplied input. As a result of this vulnerability attackers can bypass authorization and access resources in the system directly, for example database records or files.
+
+In a nutshell, IDOR is about changing integer values (numbers) to another and seeing what happens.
+
+**EXAMPLE**
+
+```
+{"example":"example","id":"1"}
+{"example":"example","id":"2"}
+```
 
 
 
-
+# References 
+[Zseanos Methodology](https://www.bugbountyhunter.com/methodology/zseanos-methodology.pdf)
+[Nahamsec Recon](https://www.youtube.com/watch?v=YT5Zl2jW3wg)
+[Jason Haddix Recon](https://www.youtube.com/watch?v=p4JgIu1mceI)
