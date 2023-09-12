@@ -96,6 +96,8 @@ In a nutshell, IDOR is about changing integer values (numbers) to another and se
 
 ## Follow up (process so far)
 [reference](https://media.defcon.org/DEF%20CON%2029/DEF%20CON%2029%20workshops/DEF%20CON%2029%20Workshop%20Philippe%20Delteil%20Bug%20Bounty%20Workshop.pdf)
+[attacking drupal] (https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/drupal)
+
 
 recon with subfinder/amass
 
